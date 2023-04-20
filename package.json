@@ -1,6 +1,6 @@
 {
   "name": "lmdb-copy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Copies one LMDB key value to another",
   "type": "module",
   "main": "index.js",
