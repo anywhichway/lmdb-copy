@@ -1,0 +1,31 @@
+{
+  "name": "lmdb-copy",
+  "version": "0.0.1",
+  "description": "Copies one LMDB key value to another",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anywhichway/lmdb-copy.git"
+  },
+  "keywords": [
+    "lmdb",
+    "copy"
+  ],
+  "author": "Simon Y. Blackwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anywhichway/lmdb-copy/issues"
+  },
+  "homepage": "https://github.com/anywhichway/lmdb-copy#readme",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "lmdb": "^2.7.11"
+  },
+  "dependencies": {
+    "lmdb-extend": "^1.0.0"
+  }
+}
