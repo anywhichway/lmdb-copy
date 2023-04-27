@@ -11,9 +11,9 @@ npm install lmdb-move
 
 ```javascript
 import {open} from "lmdb";
-import {copy,withExtensions} from "lmdb-copy";
+import {withExtensions} from "lmdb-copy";
 
-const db = withExtensions(open("test"),{move});
+const db = withExtensions(open("test"));
 await db.put("key1","value1");
 await db.copy("key1","key2");
 ```
@@ -26,7 +26,9 @@ Copies the value at `key` to `destKey` with the optional `version`. If `overwrit
 
 ### withExtensions(db:lmdbDatabase,extenstions:object) - returns lmdbDatabase`
 
-Extends an LMDB database and any child databases it opens to have the `extensions` provided as well as any child databases it opens. This utility is common to other `lmdb` extensions like `lmdb-patch`, `lmdb-copy`, `lmdb-move`.
+Extends an LMDB database and any child databases it opens to have the `extensions` provided as well as any child databases it opens. This utility is common to other `lmdb` extensions like `lmdb-patch`, `lmdb-move`.
+
+Automatically adds `copy`.
 
 # Testing
 
@@ -34,12 +36,12 @@ Unit testing is conducted with Jest.
 
 File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 ----------|---------|----------|---------|---------|-------------------
-All files |   66.66 |    58.33 |     100 |     100 |
-index.js |   66.66 |    58.33 |     100 |     100 | 3-9
-
-
+All files |   71.42 |    53.84 |     100 |     100 |
+index.js |   71.42 |    53.84 |     100 |     100 | 3-16
 
 # Release Notes (Reverse Chronological Order)
+
+2023-04-27 v0.0.4 Simplifies use of `withExtensions`.
 
 2023-04-24 v0.0.3 Documentation updates.
 

@@ -11,6 +11,10 @@ async function copy(key,destKey,overwrite,version,ifVersion) {
     return result;
 }
 
-import {withExtensions} from "lmdb-extend";
+import {withExtensions as lmdbExtend} from "lmdb-extend";
+
+const withExtensions = (db,extensions={}) => {
+    return lmdbExtend(db,{copy,...extensions})
+}
 
 export {copy as default,copy,withExtensions};

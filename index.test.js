@@ -1,7 +1,7 @@
 import {open}  from "lmdb";
 import {copy,withExtensions} from "./index.js";
 
-const db = withExtensions(open("test",{create:true,useVersions:true}),{copy});
+const db = withExtensions(open("test",{create:true,useVersions:true}));
 db.clearSync();
 test("copy",async () => {
     await db.put("hello","world");
