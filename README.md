@@ -36,10 +36,12 @@ Unit testing is conducted with Jest.
 
 File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 ----------|---------|----------|---------|---------|-------------------
-All files |   71.42 |    53.84 |     100 |     100 |
-index.js |   71.42 |    53.84 |     100 |     100 | 3-16
+All files |   92.85 |     92.3 |     100 |     100 |
+index.js |   92.85 |     92.3 |     100 |     100 | 21
 
 # Release Notes (Reverse Chronological Order)
+
+2023-05-02 v1.0.1 Updated documentation of test coverage.
 
 2023-05-02 v1.0.0 Updated license. Added unit tests. Modified error messages to be ENOENT: and EEXIST.
 
