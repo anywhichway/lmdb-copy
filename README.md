@@ -41,6 +41,8 @@ index.js |   92.85 |     92.3 |     100 |     100 | 21
 
 # Release Notes (Reverse Chronological Order)
 
+2023-05-14 v1.0.2 Removed an un-necessary transaction wrapper.
+
 2023-05-02 v1.0.1 Updated documentation of test coverage.
 
 2023-05-02 v1.0.0 Updated license. Added unit tests. Modified error messages to be ENOENT: and EEXIST.

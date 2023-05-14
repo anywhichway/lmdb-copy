@@ -15,11 +15,8 @@ async function copy(key,destKey,overwrite,version,ifVersion) {
     if(!entry) throw new Error(`ENOENT: ${key}`);
     if(ifVersion && entry.version!==ifVersion) return false;
     if(!overwrite && this.get(destKey)!==undefined) throw new Error(`EEXIST: ${destKey}`);
-    let result;
-    await this.transaction(async () => {
-        result = this.put(destKey,entry.value,version);
-        if(!result) throw new Error(`Failed to copy value from ${key} to ${destKey}`);
-    })
+    const result = await this.put(destKey,entry.value,version);
+    if(!result) throw new Error(`Failed to copy value from ${key} to ${destKey}`);
     return result;
 }
 
